@@ -1,4 +1,4 @@
-package br.uniesp.poo.aula07.heranca;
+package br.uniesp.poo.aula07.herancaVeiculo;
 
 public class Carro extends Veiculo {
     public int porta;

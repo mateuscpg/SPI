@@ -1,2 +1,5 @@
-package br.uniesp.poo.aula07.heranca;public class Moto {
+package br.uniesp.poo.aula07.herancaVeiculo;
+
+public class Moto extends Veiculo{
+
 }
