@@ -11,7 +11,7 @@ function App () {
       <View style={styles.form}>
       <Text style={styles.title_form}>LOGIN</Text>
 
-      <Text style={styles.label}>Email</Text>
+      <Text style={styles.label}>Emaill</Text>
       <TextInput style={styles.input} placeholder='Digite seu email'></TextInput>
       <Text style={styles.label}>Senha</Text>
       <TextInput style={styles.input} placeholder='Digite sua senha'></TextInput>
