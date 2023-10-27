@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TextInput } from 'react-native';
+import Numeros from './components/Numeros'
 import Primeiro from './components/Primeiro'
 
 function App () {
@@ -7,17 +8,10 @@ function App () {
     <View style={styles.container}>
 
       <Primeiro></Primeiro>
+
+      <Numeros n1={5} n2={1}/>
       
-      <View style={styles.form}>
-      <Text style={styles.title_form}>LOGIN</Text>
-
-      <Text style={styles.label}>Emaill</Text>
-      <TextInput style={styles.input} placeholder='Digite seu email'></TextInput>
-      <Text style={styles.label}>Senha</Text>
-      <TextInput style={styles.input} placeholder='Digite sua senha'></TextInput>
-      </View>
-
-      <StatusBar style="auto" />
+     
     </View>
   );
 }
