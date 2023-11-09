@@ -2,16 +2,17 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TextInput } from 'react-native';
 import Numeros from './components/Numeros'
 import Primeiro from './components/Primeiro'
+import Contador from './components/Contador';
 
 function App () {
   return (
     <View style={styles.container}>
 
-      <Primeiro></Primeiro>
+      {/* <Primeiro></Primeiro>
 
-      <Numeros n1={5} n2={1}/>
+      <Numeros n1={5} n2={1}/> */}
       
-     
+      <Contador/>
     </View>
   );
 }
