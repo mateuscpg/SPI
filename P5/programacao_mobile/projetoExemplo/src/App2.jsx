@@ -1,54 +1,87 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TextInput } from 'react-native';
-import Numeros from './components/Numeros'
-import Primeiro from './components/Primeiro'
-import Contador from './components/Contador';
+import React, { useState } from 'react';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 
-function App () {
+const App = () => {
+  const [email, setEmail] = useState('');
+  const [senha, setSenha] = useState('');
+
+  const handleLogin = () => {
+  
+    console.warn('Email:', email);
+    console.warn('Senha:', senha);
+
+  };
+
   return (
     <View style={styles.container}>
+      <View style={styles.form}>
+        <Text style={styles.login}>Login</Text>
+      <Text style={styles.label}>Email:</Text>
+      <TextInput
+        style={styles.input}
+        placeholder="Digite seu email"
+        keyboardType="email-address"
+        autoCapitalize="none"
+        value={email}
+        onChangeText={(text) => setEmail(text)}
+      />
 
-      {/* <Primeiro></Primeiro>
+      <Text style={styles.label}>Senha:</Text>
+      <TextInput
+        style={styles.input}
+        placeholder="Digite sua senha"
+        secureTextEntry
+        value={senha}
+        onChangeText={(text) => setSenha(text)}
+      />
 
-      <Numeros n1={5} n2={1}/> */}
-      
-      <Contador/>
+      <TouchableOpacity style={styles.button} onPress={handleLogin}>
+        <Text style={styles.buttonText}>Acessar</Text>
+      </TouchableOpacity>
+      </View>
+
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
     justifyContent: 'center',
+    alignItems: 'center',
   },
-  form:{
-    width: 200,
-    backgroundColor: 'black',
-    padding: 20,
-    borderRadius: 6,
+  login:{
+    fontSize:28,
+    textAlign:"center",
+    marginBottom:15
   },
-  title_form:{
-    textAlign: 'center',
-    marginBottom: 10,
-    color: 'white',
-    fontWeight: 'bold',
-    fontSize: 15,
+  form: {
+    backgroundColor:'#3498db',
+    padding: 30,
+    borderRadius: 25,
   },
-   label: {
-    marginTop: 10,
-     marginBottom: 10,
-     color: 'white',
-   },
+  label: {
+    fontSize: 18,
+    marginBottom: 8,
+  },
   input: {
-    padding: 5,
-    backgroundColor: '#ccc',
-    borderWidth: 2,
-    borderColor: 'blue',
-    borderRadius: 6,
+    height: 40,
+     borderColor: 'black',
+     borderWidth: 1,
+     marginBottom: 16,
+     margin:5,
+     padding:11
   },
-
+  button: {
+    backgroundColor: 'green',
+    padding: 10,
+    borderRadius: 5,
+  },
+  buttonText: {
+    color: 'white',
+    fontSize: 18,
+    textAlign: 'center',
+  },
 });
+
 export default App;
